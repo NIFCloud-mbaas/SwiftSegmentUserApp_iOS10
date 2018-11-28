@@ -35,8 +35,8 @@ class SegmentUserViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIWindow.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIWindow.keyboardWillHideNotification, object: nil)
         
         // user情報を取得
         self.getUser()
@@ -89,7 +89,7 @@ class SegmentUserViewController: UIViewController, UITableViewDelegate, UITableV
                 // 既存フィールド以外とchannelsはvalueを編集できるようにする
                 cell = tableView.dequeueReusableCell(withIdentifier: EDIT_CELL_IDENTIFIER) as! CustomCell!
                 if cell == nil {
-                    cell = CustomCell(style: UITableViewCellStyle.default, reuseIdentifier: EDIT_CELL_IDENTIFIER)
+                    cell = CustomCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: EDIT_CELL_IDENTIFIER)
                 }
                 cell.setCell(keyStr: keyStr, editValue: value)
                 cell.valueField.delegate = self
@@ -100,13 +100,13 @@ class SegmentUserViewController: UIViewController, UITableViewDelegate, UITableV
                     // 表示文字数が多いセルはセルの高さを変更して全体を表示させる
                     cell = tableView.dequeueReusableCell(withIdentifier: MULTI_LINE_CELL_IDENTIFIER) as! CustomCell!
                     if cell == nil {
-                        cell = CustomCell(style: UITableViewCellStyle.default, reuseIdentifier: MULTI_LINE_CELL_IDENTIFIER)
+                        cell = CustomCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: MULTI_LINE_CELL_IDENTIFIER)
                     }
                 } else {
                     // 通常のセル
                     cell = tableView.dequeueReusableCell(withIdentifier: NOMAL_CELL_IDENTIFIER) as! CustomCell!
                     if cell == nil {
-                        cell = CustomCell(style: UITableViewCellStyle.default, reuseIdentifier: NOMAL_CELL_IDENTIFIER)
+                        cell = CustomCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: NOMAL_CELL_IDENTIFIER)
                     }
                 }
                 cell.setCell(keyStr: keyStr, value: value)
@@ -116,7 +116,7 @@ class SegmentUserViewController: UIViewController, UITableViewDelegate, UITableV
             // 最後のセルは追加用セルと登録ボタンを表示
             cell = tableView.dequeueReusableCell(withIdentifier: ADD_CELL_IDENTIFIER) as! CustomCell!
             if cell == nil {
-                cell = CustomCell(style: UITableViewCellStyle.default, reuseIdentifier: ADD_CELL_IDENTIFIER)
+                cell = CustomCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: ADD_CELL_IDENTIFIER)
             }
             
             cell.keyField.delegate = self
@@ -125,7 +125,7 @@ class SegmentUserViewController: UIViewController, UITableViewDelegate, UITableV
             cell.valueField.delegate = self
             cell.valueField.tag = indexPath.row
             cell.valueField.text = self.addFieldManager.valueStr
-            cell.postBtn.addTarget(self, action: #selector(postUser(sender:)), for: UIControlEvents.touchUpInside)
+            cell.postBtn.addTarget(self, action: #selector(postUser(sender:)), for: UIControl.Event.touchUpInside)
         }
         return cell;
     }
@@ -160,7 +160,7 @@ class SegmentUserViewController: UIViewController, UITableViewDelegate, UITableV
     /**
      送信ボタンをタップした時に呼ばれます
      */
-    func postUser(sender:UIButton) {
+    @objc func postUser(sender:UIButton) {
         
         // textFieldの編集を終了する
         self.view.endEditing(true)
@@ -267,11 +267,11 @@ class SegmentUserViewController: UIViewController, UITableViewDelegate, UITableV
     /**
      キーボードが表示されたら呼ばれる
      */
-    func keyboardWillShow(_ notification: NSNotification) {
+    @objc func keyboardWillShow(_ notification: NSNotification) {
         
-        var keyboardRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as! CGRect
+        var keyboardRect = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
         keyboardRect = self.view.superview!.convert(keyboardRect, to: nil)
-        let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]
+        let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey]
         
         let keyboardPosition = self.view.frame.size.height - keyboardRect.size.height as CGFloat
         
@@ -292,8 +292,8 @@ class SegmentUserViewController: UIViewController, UITableViewDelegate, UITableV
     /**
      キーボードが隠れると呼ばれる
      */
-    func keyboardWillHide(_ notification: NSNotification) {
-        let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey]
         
         // アニメーションでtextFieldを動かす
         UIView.animate(withDuration: duration as! Double, animations: { () -> Void in
