@@ -21,12 +21,14 @@
 * iPhone5 iOS 9.3.5
 * iPhone6s iOS 10.0.1
 * Simulator iOS 10.0
- * iPhone7
+  * iPhone7
+* iOS SDK v3.0.0
+* swift ver. 4.2
 
 ※上記内容で動作確認をしています
 
 ## 作業の手順
-### 1. [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の会員登録とログイン
+### 1. [ニフクラ mobile backend](https://mbaas.nifcloud.com/signup.htm)の会員登録とログイン
 
 * 上記リンクから会員登録（無料）をします。登録ができたらログインをすると下図のように「アプリの新規作成」画面が出るのでアプリを作成します
 
@@ -45,7 +47,7 @@
 
 * 下記リンクをクリックしてプロジェクトをダウンロードをMacにダウンロードします
 
- * __[SwiftSegmentUserApp](https://github.com/NIFCloud-mbaas/SwiftSegmentUserApp_iOS10/archive/master.zip)__
+  * __[SwiftSegmentUserApp](https://github.com/NIFCloud-mbaas/SwiftSegmentUserApp_iOS10/archive/master.zip)__
 
 ### 3. Xcodeでアプリを起動
 
@@ -66,12 +68,12 @@
 ![画像07](/readme-img/007.png)
 
 * それぞれ`YOUR_NCMB_APPLICATION_KEY`と`YOUR_NCMB_CLIENT_KEY`の部分を書き換えます
- * このとき、ダブルクォーテーション（`"`）を消さないように注意してください！
+  * このとき、ダブルクォーテーション（`"`）を消さないように注意してください！
 * 書き換え終わったら`command + s`キーで保存をします
 
 ### 5. 動作確認
 * Xcode画面の左上、適当なSimulatorを選択します
- * iPhone7の場合は以下のようになります
+  * iPhone7の場合は以下のようになります
 * 実行ボタン（さんかくの再生マーク）をクリックします
 
 * アプリが起動したら、Login画面が表示されます
@@ -104,9 +106,9 @@
 
 ## 解説
 * 下記３点について解説します
- * 会員登録
- * ログイン
- * 会員情報の取得
+  * 会員登録
+  * ログイン
+  * 会員情報の取得
 
 ### 会員登録
 `SignUpViewController.swift`
@@ -168,4 +170,4 @@ user?.fetchInBackground({ (error) in
 
 ## 参考
 * 同じ内容の【Objective-C】版もご用意しています
- * [ObjcSegmentUserApp_iOS10](https://github.com/NIFCloud-mbaas/ObjcSegmentUserApp_iOS10)
+  * [ObjcSegmentUserApp_iOS10](https://github.com/NIFCloud-mbaas/ObjcSegmentUserApp_iOS10)
