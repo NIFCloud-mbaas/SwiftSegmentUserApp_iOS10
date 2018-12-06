@@ -1,5 +1,5 @@
 # 【iOS10 Swift】ユーザー情報を更新してみよう！
-*2016/10/26作成*
+*2016/10/26作成（2018/12/15更新） *
 
 ![画像01](/readme-img/001.png)
 
@@ -7,7 +7,7 @@
 * [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の『会員管理機能』を利用してObjective-Cアプリにログイン機能を実装し、ユーザー情報を更新するサンプルプロジェクトです
 * 簡単な操作ですぐに [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の機能を体験いただけます★☆
 * このサンプルはiOS10に対応しています
- * iOS8以上でご利用いただけます
+  * iOS8以上でご利用いただけます
 
 ## ニフクラ mobile backendって何？？
 スマートフォンアプリのバックエンド機能（プッシュ通知・データストア・会員管理・ファイルストア・SNS連携・位置情報検索・スクリプト）が**開発不要**、しかも基本**無料**(注1)で使えるクラウドサービス！
@@ -17,13 +17,13 @@
 ![画像02](/readme-img/002.png)
 
 ## 動作環境
-* Mac OS X 10.11.6(El Capitan)
+* Mac OS 10.13.6 (High Sierra)
+* Xcode 10.0.0
 * iPhone5 iOS 9.3.5
 * iPhone6s iOS 10.0.1
 * Simulator iOS 10.0
   * iPhone7
 * iOS SDK v3.0.0
-* swift ver. 4.2
 
 ※上記内容で動作確認をしています
 
