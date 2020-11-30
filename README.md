@@ -17,9 +17,10 @@
 ![画像02](/readme-img/002.png)
 
 ## 動作環境
-* Mac OS 10.15.5(Catalina)
-* Simulator iOS 13.5.1
-* Swift SDK v1.1.0
+* Mac OS 10.15(Catalina)
+* Xcode ver. 12.0
+* Simulator ver.12.0
+* iPhone11 (iOS14.0)
 
 ※上記内容で動作確認をしています
 
