@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E7o-kx-W55">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E7o-kx-W55">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,6 +41,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oWF-kZ-Lds">
                                 <rect key="frame" x="83" y="228.5" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfUsername"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="XOm-e8-66W"/>
                                     <constraint firstAttribute="height" constant="30" id="q9J-9Q-xpo"/>
@@ -62,15 +61,17 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7H3-Nd-4fY">
                                 <rect key="frame" x="83" y="287.5" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfPassword"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5xT-k4-c1d"/>
                                     <constraint firstAttribute="width" constant="209" id="upy-XS-gMD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpL-36-bGf">
                                 <rect key="frame" x="117.5" y="341.5" width="140" height="60"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnLogin"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="8Vl-9f-5Az"/>
                                     <constraint firstAttribute="height" constant="60" id="B0q-xB-z2w"/>
@@ -80,8 +81,9 @@
                                     <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMx-vN-1FB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cd-Xy-MjS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cd-Xy-MjS">
                                 <rect key="frame" x="152.5" y="414.5" width="70" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnSignUp"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NTe-5v-KXk"/>
                                     <constraint firstAttribute="width" constant="70" id="qIr-RH-rLs"/>
@@ -179,6 +181,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSu-wT-Wp3">
                                 <rect key="frame" x="83" y="223.5" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfUsername"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7ac-Ac-41G"/>
                                     <constraint firstAttribute="width" constant="209" id="Xba-KF-0rs"/>
@@ -198,15 +201,17 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNl-mX-bJK">
                                 <rect key="frame" x="83" y="282.5" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfPassword"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="a3H-pe-Juz"/>
                                     <constraint firstAttribute="width" constant="209" id="oAT-Mf-NOR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNb-SL-tLW">
                                 <rect key="frame" x="117.5" y="405.5" width="140" height="60"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnSignUp"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="YiO-ti-bgt"/>
                                     <constraint firstAttribute="width" constant="140" id="wTm-AQ-xAa"/>
@@ -228,12 +233,13 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-Bs-ACG">
                                 <rect key="frame" x="83" y="341.5" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfConfirm"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="PaR-o3-abv"/>
                                     <constraint firstAttribute="width" constant="209" id="ul2-r4-r01"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password (One more)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7T-LD-eLm">
                                 <rect key="frame" x="83.5" y="320.5" width="105" height="21"/>
@@ -300,11 +306,12 @@
                         <viewControllerLayoutGuide type="bottom" id="b4n-GB-7Hc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WOL-M2-MJF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKC-dK-PRU">
-                                <rect key="frame" x="16" y="30" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKC-dK-PRU">
+                                <rect key="frame" x="16" y="10" width="100" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnLogout"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="cq2-r5-OHi"/>
                                     <constraint firstAttribute="height" constant="30" id="nsx-tQ-eAX"/>
@@ -316,7 +323,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SegmentUserApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDg-rO-SBG">
-                                <rect key="frame" x="30" y="25" width="315" height="130"/>
+                                <rect key="frame" x="30" y="5" width="315" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="GAF-s1-STo"/>
                                 </constraints>
@@ -325,17 +332,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rD9-Xz-ZxS" userLabel="StatusLabel">
-                                <rect key="frame" x="36" y="140" width="303" height="0.0"/>
+                                <rect key="frame" x="36" y="120" width="303" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="45" sectionHeaderHeight="17" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qwx-7G-NBE">
-                                <rect key="frame" x="0.0" y="160" width="375" height="499"/>
+                                <rect key="frame" x="0.0" y="140" width="375" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sectionHeader" rowHeight="17" id="VL7-lh-TpB">
-                                        <rect key="frame" x="0.0" y="17" width="375" height="17"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="17"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VL7-lh-TpB" id="XJH-aF-p6e">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="17"/>
@@ -374,7 +381,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nomalCell" rowHeight="45" id="eru-52-mWL" customClass="CustomCell" customModule="SwiftSegmentUserApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="34" width="375" height="45"/>
+                                        <rect key="frame" x="0.0" y="45" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eru-52-mWL" id="Svb-dr-XXD">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
@@ -420,7 +427,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="multiLineCell" rowHeight="55" id="yAz-aK-vjK" customClass="CustomCell" customModule="SwiftSegmentUserApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="55"/>
+                                        <rect key="frame" x="0.0" y="90" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yAz-aK-vjK" id="bRR-ub-QXU">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
@@ -465,7 +472,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="editCell" rowHeight="45" id="8Ut-6J-EY7" customClass="CustomCell" customModule="SwiftSegmentUserApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="134" width="375" height="45"/>
+                                        <rect key="frame" x="0.0" y="145" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ut-6J-EY7" id="Zyl-aI-S1v">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
@@ -486,7 +493,6 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="rFc-ze-MNZ"/>
                                                     </constraints>
-                                                    <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -509,7 +515,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addCell" id="5FA-Py-gQL" customClass="CustomCell" customModule="SwiftSegmentUserApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="179" width="375" height="45"/>
+                                        <rect key="frame" x="0.0" y="190" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5FA-Py-gQL" id="i2u-ah-qkD">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
@@ -517,25 +523,26 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="追加key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rVb-hK-fkS">
                                                     <rect key="frame" x="5" y="5" width="112.5" height="40"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="tfKey"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="vrK-TC-0tX"/>
                                                     </constraints>
-                                                    <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="追加value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mrG-wb-5c9">
                                                     <rect key="frame" x="122.5" y="5" width="247.5" height="40"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="tfValue"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="MhS-Iv-Sfo"/>
                                                     </constraints>
-                                                    <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IA-hG-OD5">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IA-hG-OD5">
                                                     <rect key="frame" x="137.5" y="65" width="100" height="50"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="btnSave"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="qlz-6E-aCm"/>
                                                         <constraint firstAttribute="width" constant="100" id="x14-If-lw1"/>
@@ -555,6 +562,9 @@
                                                 <constraint firstItem="rVb-hK-fkS" firstAttribute="leading" secondItem="i2u-ah-qkD" secondAttribute="leading" constant="5" id="p3r-tl-Tpd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="addCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstItem="i2u-ah-qkD" firstAttribute="width" secondItem="5FA-Py-gQL" secondAttribute="width" id="oC5-ip-ob7"/>
                                             <constraint firstItem="rVb-hK-fkS" firstAttribute="width" secondItem="5FA-Py-gQL" secondAttribute="width" multiplier="0.3" id="yGp-X9-Wa6"/>
@@ -609,7 +619,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E7o-kx-W55" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tws-ya-uWa">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -622,11 +632,11 @@
             <point key="canvasLocation" x="430" y="-76"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SI2-6G-d4p"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Login" width="284" height="107"/>
         <image name="SignUp" width="284" height="107"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="SI2-6G-d4p"/>
-    </inferredMetricsTieBreakers>
 </document>
